@@ -1,15 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\CreatorsController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Rotte nominali
+Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
-Route::get('/annunci', function(){
-    return view('annunci');
-});
+Route::get('/annunci', [PublicController::class, 'annunci'])->name('annunci');
 
-Route::get('/chi-siamo', function(){
-    return view('chi-siamo');
-});
+Route::get('/chi-siamo', [CreatorsController::class, 'chiSiamo'])->name('chi.siamo');
+
+// Rotta parametrica
+Route::get('/chi-siamo/dettaglio/{name}', [CreatorsController::class, 'dettaglio'])->name('dettaglio');
