@@ -7,7 +7,7 @@ use App\Http\Controllers\CreatorsController;
 // Rotte nominali
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
-Route::get('/annunci', [PublicController::class, 'annunci'])->name('annunci');
+Route::get('/annunci', [PublicController::class, 'servizi'])->name('servizi');
 
 Route::get('/chi-siamo', [CreatorsController::class, 'chiSiamo'])->name('chi.siamo');
 

@@ -20,7 +20,7 @@
           <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('annunci')}}">Annunci</a>
+          <a class="nav-link" href="{{route('servizi')}}">Servizi</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{route('chi.siamo')}}">Chi Siamo</a>
@@ -34,13 +34,18 @@
     </header>
 
     <main>
-        <div class="container">
-            <div class="row">
-               <div class="col-12">
-                <p class="h2 text-center">{{$creator['name']}}</p>
-               </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <img src="/avatar.png" alt="Foto del creator" class="img-fluid">
+          </div>
+          <div class="col-12 col-md-6">
+            <p class="h2 text-center">{{$creator['name']}} {{$creator['surname']}}</p>
+            <p class="h4 text-center">{{$creator['description']}}</p>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aspernatur vel delectus sequi! Voluptate facilis vero animi. Obcaecati voluptate perspiciatis possimus veniam provident at totam libero, aliquid officia autem maxime.</p>
+          </div>
         </div>
+      </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
